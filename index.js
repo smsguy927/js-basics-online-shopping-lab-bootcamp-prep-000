@@ -36,7 +36,10 @@ let message;
  } else {
    message = 'Your shopping cart is empty.';
  }
- message = messageArr.join('');
+ if(messageArr.length > 0) {
+    message = messageArr.join('');
+ }
+
  return message;
 }
 
