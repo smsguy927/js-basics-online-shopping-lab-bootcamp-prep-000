@@ -26,7 +26,7 @@ let message;
    messageArr.push('In your cart, you have ');
    for(let i = 0; i < cart.length; i++) {
      if(cart.length - i === 1) {
-       messageArr.push(`${cart[i].itemName} at $${cart[i].itemPrice}` );
+       messageArr.push(`${cart[i].itemName} at $${cart[i].itemPrice}.` );
      }else if(cart.length - i === 2) {
        messageArr.push(`${cart[i].itemName} at $${cart[i].itemPrice}, and ` );
      } else {
