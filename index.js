@@ -45,6 +45,11 @@ let message;
 
 function total() {
   // write your code here
+  let total = 0;
+for(item in cart) {
+  total += item.itemPrice;        
+}
+return total;
 }
 
 function removeFromCart(item) {
