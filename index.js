@@ -47,7 +47,7 @@ function total() {
   // write your code here
   let total = 0;
 for(item in cart) {
-  total += item.itemPrice;        
+  total += item.itemPrice;
 }
 return total;
 }
