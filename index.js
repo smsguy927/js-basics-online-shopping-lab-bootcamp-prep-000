@@ -20,23 +20,24 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  let message;
-  let messageArr = [];
-  if(cart.length > 0) {
-    messageArr.push('In your cart, you have ');
-    for(let i = 0; i < cart.length; i++) {
-      if(cart.length - i === 1) {
-        messageArr.push(`${cart[i].itemName} at ${cart[i][itemPrice]}` );
-      }else if(cart.length - i === 2) {
-        messageArr.push(`${cart[i].itemName} at ${cart[i][itemPrice]}, and ` );
-      } else {
-        messageArr.push(`${cart[i].itemName} at ${cart[i][itemPrice]}, ` );
-      }
-    }
-  } else {
-    message = 'Your shopping cart is empty.';
-  }
-  return message;
+let message;
+ let messageArr = [];
+ if(cart.length > 0) {
+   messageArr.push('In your cart, you have ');
+   for(let i = 0; i < cart.length; i++) {
+     if(cart.length - i === 1) {
+       messageArr.push(`${cart[i].itemName} at $${cart[i].itemPrice}` );
+     }else if(cart.length - i === 2) {
+       messageArr.push(`${cart[i].itemName} at $${cart[i].itemPrice}, and ` );
+     } else {
+       messageArr.push(`${cart[i].itemName} at $${cart[i].itemPrice}, ` );
+     }
+   }
+ } else {
+   message = 'Your shopping cart is empty.';
+ }
+ message = messageArr.join('');
+ return message;
 }
 
 function total() {
